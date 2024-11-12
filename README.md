@@ -28,7 +28,7 @@ The database is organized into 4 tables:
 * `metadata`: A single row containing the most recent date in the scraped data.
 * `players`: Matches Thronebutt IDs to Steam usernames. Users from other platforms have blank names. These names were up-to-date at the time they were scraped. The first time I ran the scraper was around November 2022, so many names will be from that time period. If a user changed their name, it would only be updated to the new one if and when they submitted a new daily run. I did not store Steam IDs or keep track of old usernames after name changes.
 * `runs`: The main part of the database. It contains 3706471 rows, each with the details of one run. Its columns are as follows:
-  * `jdate`: The [Julian day number](https://en.wikipedia.org/wiki/Julian_day) of the run. A simple online converter for Julian day numbers can be found [here](https://aa.usno.navy.mil/data/JulianDate). SQLite can convert to and from Julian days natively.
+  * `jdate`: The [Julian day number](https://en.wikipedia.org/wiki/Julian_day) of the run. A simple online converter for Julian day numbers can be found [here](https://ssd.jpl.nasa.gov/tools/jdc/#/jd). SQLite can convert to and from Julian days natively.
   * `rank`: The final rank of the run at the time of scraping. Rank could change after the fact if a player with a higher rank was banned.
   * `id`: The ID assigned to the player by Thronebutt at the time of the player's first daily or weekly submission. These were created in sequential order; older accounts had lower numbers.
   * `character`: The character played. Followed by `B` if the player used the B skin, e.g. `fishB`.
