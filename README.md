@@ -44,3 +44,5 @@ The database is organized into 4 tables:
 There has been no effort to clean up data that is obviously the result of a bug or a cheat, only to match Thronebutt's archive as closely as possible. For example, there are 99 runs in the database that ended in L0 1-* but have ultra mutations listed, 4 runs listed as having reached Loop 128, and 2 runs (including one by myself!) listed as having taken *every* mutation, including Heavy Heart.
 
 There are 24583 runs (of 3706471 total, ~0.66%) that appeared both at the bottom of one page and the top of the next in the archive; these are also listed twice in the database. I suspect that these appeared "on top of" other runs, causing the same number of runs to not appear at all. There are also 1108 pages (of 126049 total, ~0.88%) that failed to load listed in the `errors` table.
+
+You can find a `lang.ini` file (initially named `lang-example.ini`) included in the game files of the `ntt_development` beta in Steam or from the older [Nuclear Throne Together](https://yellowafterlife.itch.io/nuclear-throne-together) website.
