@@ -1,3 +1,6 @@
+# don't try to scrape the new website with this
+puts 'Thronebutt is dead. Long live Thronebutt'; exit
+
 TIME = Time.now
 t = TIME
 
