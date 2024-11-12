@@ -1,0 +1,1 @@
+SELECT 'https://thronebutt.com/archive/' || STRFTIME('%d%m%Y', jdate) || '/' || CAST((rank - 1) / 30 + 1 AS INT) AS "url", * FROM runs
