@@ -34,7 +34,7 @@ The database is organized into 4 tables:
   * `character`: The character played. Followed by `B` if the player used the B skin, e.g. `fishB`.
   * `loop`: The highest loop reached in the run.
   * `stage`: The stage reached in the run as displayed in-game, e.g. `1-3`, `0-1`, `3-?`, `HQ1`, `$$$`, etc.
-  * `score`: The final sumbitted score of the run.
+  * `score`: The final submitted score of the run.
   * `ultra`: The internal ID of the active ultra mutation at the end of the run. `NULL` if the player died before getting one. Ultra IDs can be found in `lang.ini` in the `[Races]` section. The character ID and the ultra ID are concatenated, e.g. Horror's (ID 11) ultra Meltdown (ID 3) is 113.
   * `muts`: The final list of mutations taken by the player, packed into a bit field. Mutation IDs can be found in `lang.ini` under `[Skills]`. If a player only took Rhino Skin (ID 1) and then died, the value of this column would be 2¹ = 2. If a player took Rhino Skin (1), Plutonium Hunger (3), and Rabbit Paw (4) before dying, the value would be 2¹ + 2³ + 2⁴ = 2 + 8 + 16 = 26. Heavy Heart's in-game ID is 29, but it was 0 on Thronebutt; due to this bug, it (almost) never showed up on Thronebutt, so it (almost) never appears in the database. Patience does appear in the final list even if the Patience set is seen; Last Wish does not after visiting the jungle, just like in the in-game display.
   * `weapons`: The weapons held by the player at the time of death. Weapon IDs can be found in `lang.ini` under `[Weapons]`. The main-hand and off-hand weapon IDs are padded to 3 digits and concatenated, e.g. main-hand Super Plasma Cannon (ID 111) and off-hand Ultra Shovel (ID 92) would be 111092, and main-hand Rogue Rifle (ID 81) and no off-hand (ID 0) would be 81000.
